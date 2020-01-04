@@ -191,38 +191,40 @@ class Lane_Detection:
 """
 Test Module
 ----------------
-
-image = mpimg.imread('test_images/straight_lines2.jpg')
-print('This image is: ',type(image), 'with dimensions:', image.shape)
-
-ld = Lane_Detection()
-ld.load_image(image)
-
-ld.calc_binary()
-ld.warp_image()
-ld.find_lane_pixels()
-ld.fit_polynomial()
-
-#combined_binary = calc_binary(image)
-#binary_warped = warp_image(combined_binary)
-#leftx, lefty, rightx, righty, out_img = find_lane_pixels(binary_warped)
-#out_img = fit_polynomial(binary_warped, leftx, lefty, rightx, righty, out_img)
-
-#gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) #grayscale conversion
-
-#kernel_size = 3
-#blur_gray = cv2.GaussianBlur(gray,(kernel_size, kernel_size), 0)
-
-#low_threshold = 190
-#high_threshold = 255
-#edges = cv2.Canny(gray, low_threshold, high_threshold)
-
-
-fig, (ax1, ax2) = plt.subplots(1, 2)
-ax1.imshow(image)
-ax2.imshow(ld.out_img,cmap='gray')
-
-#plt.imshow(edges, cmap='gray')
-#plt.imshow(out_img,cmap='gray')
-plt.show()
 """
+
+if __name__ == "__main__":
+    
+    image = mpimg.imread('test_images/straight_lines2.jpg')
+    print('This image is: ',type(image), 'with dimensions:', image.shape)
+
+    ld = Lane_Detection()
+    ld.load_image(image)
+
+    ld.calc_binary()
+    ld.warp_image()
+    ld.find_lane_pixels()
+    ld.fit_polynomial()
+
+    #combined_binary = calc_binary(image)
+    #binary_warped = warp_image(combined_binary)
+    #leftx, lefty, rightx, righty, out_img = find_lane_pixels(binary_warped)
+    #out_img = fit_polynomial(binary_warped, leftx, lefty, rightx, righty, out_img)
+
+    #gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY) #grayscale conversion
+
+    #kernel_size = 3
+    #blur_gray = cv2.GaussianBlur(gray,(kernel_size, kernel_size), 0)
+
+    #low_threshold = 190
+    #high_threshold = 255
+    #edges = cv2.Canny(gray, low_threshold, high_threshold)
+
+
+    fig, (ax1, ax2) = plt.subplots(1, 2)
+    ax1.imshow(image)
+    ax2.imshow(ld.out_img,cmap='gray')
+
+    #plt.imshow(edges, cmap='gray')
+    #plt.imshow(out_img,cmap='gray')
+    plt.show()

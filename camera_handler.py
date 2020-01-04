@@ -26,7 +26,7 @@ for frame in camera.capture_continuous(rawCapture, format="rgb", use_video_port=
     # grab the raw NumPy array representing the image, then initialize the timestamp
     # and occupied/unoccupied text
     image = frame.array
-    
+    print(image.shape)
     #load the new image into ld
     ld.load_image(image)
     
