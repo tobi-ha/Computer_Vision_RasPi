@@ -1,7 +1,9 @@
 # files
 lane_detection__export.py
 test_1.py
- 
+.workspace-submit.json
+
 #directories
 /advanced_computer_vision_udacity
+/advanced_computer_vision_udacity/CarND-Advanced-Lane-Lines*
 /__pycache__
